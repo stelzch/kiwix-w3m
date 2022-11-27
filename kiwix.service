@@ -1,0 +1,9 @@
+[Unit]
+Description=Serve ZIM files on local network
+
+[Service]
+ExecStart=/bin/bash -c "/usr/bin/kiwix-serve -p 8081 $HOME/Downloads/*.zim"
+Restart=always
+
+[Install]
+WantedBy=default.target
